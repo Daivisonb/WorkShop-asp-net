@@ -19,5 +19,10 @@ namespace WebApplication1.Services
         {
             return _webApplication1Context.Seller.ToList();
         }
+        public void Insert(Seller seller)
+        {
+            _webApplication1Context.Add(seller);
+            _webApplication1Context.SaveChanges();
+        }
     }
 }
